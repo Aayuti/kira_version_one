@@ -1,7 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 import 'nav/home_screen.dart'; // Import home screen
 
-class SplashScreen extends StatelessWidget {
+class SplashScreen extends StatefulWidget {
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+  void _checkAuth() async {
+    final session = Supabase.instance.client.auth.currentSession;
+
+    if (session != null) {
+      Navigator.pushReplacementNamed(context, '/home');
+    } else {
+      Navigator.pushReplacementNamed(
+          context, '/register'); // or /register if that’s your flow
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,7 +71,8 @@ class SplashScreen extends StatelessWidget {
                           ),
                         ],
                       ),
-                      padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 16.0),
+                      padding: EdgeInsets.symmetric(
+                          horizontal: 20.0, vertical: 16.0),
                       width: 250,
                       child: Text(
                         'Take a deep breath...',
@@ -82,15 +100,18 @@ class SplashScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(bottom: 50.0),
               child: ElevatedButton(
-                onPressed: () {
-                  // Navigate to HomeScreen when button is pressed
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(builder: (context) => HomeScreen()), // Change to HomeScreen
-                  );
+                onPressed: () async {
+                  final session = Supabase.instance.client.auth.currentSession;
+
+                  if (session != null) {
+                    Navigator.pushReplacementNamed(context, '/home');
+                  } else {
+                    Navigator.pushReplacementNamed(context, '/register');
+                  }
                 },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Color(0xFF0D4380), // Blue background for button
+                  backgroundColor:
+                      Color(0xFF0D4380), // Blue background for button
                   minimumSize: Size(200, 50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12),
@@ -108,7 +129,7 @@ class SplashScreen extends StatelessWidget {
             ),
           ],
         ),
-      ),  
+      ),
     );
   }
 }

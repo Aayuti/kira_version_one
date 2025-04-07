@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kira_version_one/chatbot/chatbot.dart';
 import 'nav/home_screen.dart';
 import 'nav/activities_screen.dart';
 import 'nav/explore_screen.dart';
@@ -14,7 +15,7 @@ class _MainScreenState extends State<MainScreen> {
 
   final List<Widget> _pages = [
     HomeScreen(),
-    ActivitiesScreen(),
+    ChatbotScreen(),
     ExploreScreen(),
     ProfileScreen(),
   ];
@@ -25,22 +26,16 @@ class _MainScreenState extends State<MainScreen> {
       body: _pages[_currentIndex], // Show selected page
       bottomNavigationBar: Container(
         decoration: BoxDecoration(
-          color: Colors.blue, // Default black background
+          color: const Color.fromARGB(255, 186, 228, 231), // Default black background
           borderRadius: BorderRadius.vertical(top: Radius.circular(30)), // Rounded edges
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black12, // Soft shadow for effect
-              blurRadius: 10,
-              spreadRadius: 2,
-            ),
-          ],
+         
         ),
         child: ClipRRect(
           borderRadius: BorderRadius.vertical(top: Radius.circular(30)), // More rounded edges
           child: BottomNavigationBar(
-            backgroundColor: Colors.transparent, // Transparent to apply container color
+            backgroundColor: const Color.fromARGB(255, 160, 228, 238), // Transparent to apply container color
             selectedItemColor: Colors.blue, // Highlight color when clicked
-            unselectedItemColor: Colors.grey[400], // Unselected icons in grey (visible on black)
+            unselectedItemColor: const Color.fromARGB(255, 66, 81, 86), // Unselected icons in grey (visible on black)
             currentIndex: _currentIndex,
             type: BottomNavigationBarType.fixed, // Keeps labels visible
             onTap: (index) {
@@ -50,7 +45,14 @@ class _MainScreenState extends State<MainScreen> {
             },
             items: [
               BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-              BottomNavigationBarItem(icon: Icon(Icons.favorite), label: 'Activities'),
+              BottomNavigationBarItem(
+                icon: Image.asset(
+                  'assets/images/chatbot.png', // same as used in your FAB
+                  height: 24,
+                  width: 24,
+                ),
+                label: 'Kira AI',
+              ),
               BottomNavigationBarItem(icon: Icon(Icons.explore), label: 'Explore'),
               BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
             ],

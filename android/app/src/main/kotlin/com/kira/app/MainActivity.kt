@@ -1,4 +1,4 @@
-package com.example.kira_version_one
+package com.kira.app
 
 import io.flutter.embedding.android.FlutterActivity
 

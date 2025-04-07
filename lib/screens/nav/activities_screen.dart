@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kira_version_one/screens/games/DumpYourAngerScreen.dart';
 
 class ActivitiesScreen extends StatelessWidget {
   @override
@@ -31,6 +32,7 @@ class ActivitiesScreen extends StatelessWidget {
                 children: [
                   // First Container (with icon and pastel look)
                   _buildAngerContainer(
+                    context: context,
                     color: Colors.pink[100]!,  // Pastel pink
                     icon: 'assets/images/trash-can-open.png',  // Trash can icon
                   ),
@@ -38,6 +40,7 @@ class ActivitiesScreen extends StatelessWidget {
                   
                   // Second Container (with icon and pastel look)
                   _buildAngerContainer(
+                    context: context,
                     color: Colors.green[100]!,  // Pastel green
                     icon: 'assets/images/diary.png', // Replace with your icon
                   ),
@@ -45,6 +48,7 @@ class ActivitiesScreen extends StatelessWidget {
                   
                   // Third Container (with icon and pastel look)
                   _buildAngerContainer(
+                    context: context,
                     color: Colors.blue[100]!,  // Pastel blue
                     icon: 'assets/images/musical-note.png', // Replace with your icon
                   ),
@@ -52,6 +56,7 @@ class ActivitiesScreen extends StatelessWidget {
                   
                   // Fourth Container (with icon and pastel look)
                   _buildAngerContainer(
+                    context: context,
                     color: Colors.yellow[100]!,  // Pastel yellow
                     icon: 'assets/images/meditation.png', // Replace with your icon
                   ),
@@ -59,6 +64,7 @@ class ActivitiesScreen extends StatelessWidget {
                   
                   // Fifth Container (with icon and pastel look)
                   _buildAngerContainer(
+                    context: context,
                     color: Colors.purple[100]!,  // Pastel purple
                     icon: 'assets/images/console.png', // Replace with your icon
                   ),
@@ -73,13 +79,20 @@ class ActivitiesScreen extends StatelessWidget {
 
   // Helper function to create each container
   Widget _buildAngerContainer({
+    required BuildContext context,
     required Color color, 
     required String icon,
   }) {
     return GestureDetector(
       onTap: () {
         // Handle the action for tapping (e.g., navigate to the next screen)
-      },
+        print("hello");
+        if (icon == 'assets/images/trash-can-open.png') {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => DumpYourAngerScreen()),
+      );
+      }},
       child: Container(
         width: 120,
         height: 120,

@@ -39,6 +39,26 @@ dependencies:
   supabase_flutter: ^2.8.3
   shared_preferences: ^2.5.2
   random_string: ^2.3.1
+  flutter_web_auth_2: ^2.0.1
+  provider: ^6.1.4
+  firebase_core: ^2.27.0
+  firebase_auth: ^4.17.6
+  fluttertoast: ^8.2.2
+  lottie: ^2.2.0
+  geolocator: ^10.1.0
+  permission_handler: ^11.3.0
+  url_launcher: ^6.2.5
+  signature: ^5.3.1  
+  path_provider: ^2.1.1
+  audioplayers: ^5.2.1
+  fl_chart: ^0.66.0 
+  flutter_launcher_icons: ^0.13.1
+
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/icon.png"
 
 dev_dependencies:
   flutter_test:
@@ -72,6 +92,18 @@ flutter:
     - assets/images/diary.png
     - assets/images/console.png
     - assets/images/meditation.png
+    - assets/images/google.png
+    - assets/stickers/stress_relief.gif
+    - assets/textures/book_page_bg.jpg
+    - assets/stickers/relaxing.gif
+    - assets/images/chatbot.png
+    - assets/sources/medical_contacts.json
+    - assets/stickers/breathe.gif
+    - assets/stickers/bodyscan.gif
+    - assets/stickers/mindful.gif
+    - assets/audio/meditation_music.mp3
+    - assets/stickers/ocd.gif
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

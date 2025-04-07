@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -44,7 +45,8 @@ class _LoginScreenState extends State<LoginScreen> {
                     decoration: InputDecoration(
                       labelText: 'Email',
                       filled: true,
-                      fillColor: const Color(0xFFDFF6FF), // Light blue background
+                      fillColor:
+                          const Color(0xFFDFF6FF), // Light blue background
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(12),
                         borderSide: BorderSide.none,
@@ -55,7 +57,9 @@ class _LoginScreenState extends State<LoginScreen> {
                       if (value == null || value.isEmpty) {
                         return 'Please enter your email';
                       }
-                      if (!RegExp(r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$').hasMatch(value)) {
+                      if (!RegExp(
+                              r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$')
+                          .hasMatch(value)) {
                         return 'Enter a valid email';
                       }
                       return null;
@@ -77,7 +81,9 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                       suffixIcon: IconButton(
                         icon: Icon(
-                          _obscurePassword ? Icons.visibility_off : Icons.visibility,
+                          _obscurePassword
+                              ? Icons.visibility_off
+                              : Icons.visibility,
                           color: Colors.grey,
                         ),
                         onPressed: () {
@@ -102,9 +108,34 @@ class _LoginScreenState extends State<LoginScreen> {
                   // Login Button
                   Center(
                     child: ElevatedButton(
-                      onPressed: () {
+                      onPressed: () async {
+                        final allProfiles = await Supabase.instance.client
+                            .from('profiles')
+                            .select();
+
+                        print('All profiles: $allProfiles');
+
                         if (_formKey.currentState?.validate() ?? false) {
-                          Navigator.pushNamed(context, '/home');
+                          final email = _emailController.text.trim();
+
+                          final response = await Supabase.instance.client
+                              .from('profiles')
+                              .select()
+                              .eq('email', email)
+                              .maybeSingle();
+
+                          if (response != null) {
+                            print('Response from Supabase: $response');
+                            Navigator.pushNamed(context, '/home');
+                          } else {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                content:
+                                    Text('No account found with this email'),
+                                backgroundColor: Colors.redAccent,
+                              ),
+                            );
+                          }
                         }
                       },
                       style: ElevatedButton.styleFrom(
@@ -128,7 +159,8 @@ class _LoginScreenState extends State<LoginScreen> {
 
                   Center(
                     child: TextButton(
-                      onPressed: () => Navigator.pushNamed(context, '/register'),
+                      onPressed: () =>
+                          Navigator.pushNamed(context, '/register'),
                       child: Text(
                         'Don’t have an account? Register',
                         style: GoogleFonts.quicksand(

@@ -1,0 +1,189 @@
+[
+    {
+      "name": "Bhakti B. Joshi",
+      "pronouns": "She/Her",
+      "age": 30,
+      "experience": "6 years",
+      "specializations": [
+        "Coping With Anxiety, Burnout, or Depression",
+        "LGBTQIA Concerns",
+        "Navigating Grief",
+        "Individual Therapy (For Everyone)",
+        "Navigating Relationships"
+      ],
+      "contact": {
+        "email": "bhakti.joshi@example.com",
+        "phone": "+91 9876543210 "
+      },
+      "languages_spoken": ["English", "Hindi", "Marathi", "Gujarati"],
+      "session_medium": ["Online", "Offline"],
+      "location": {
+        "city": "Mumbai",
+        "area": "Charni Road"
+      },
+      "fee": 2500,
+      "session_duration": "45-60 Minutes",
+      "qualifications": [
+        "Masters In Counselling Psychology",
+        "Additional 11 certifications"
+      ],
+      "notes": "Sliding scale fees range from ₹500 to ₹1800 based on case. Fee for NRIs: $55.",
+      "profile_url": "https://themindclan.com/professionals/bhakti-b-joshi-01032024/"
+    },
+    {
+      "name": "Ayesha Sharma",
+      "pronouns": "She/Her",
+      "age": 29,
+      "experience": "5 years",
+      "specializations": [
+       
+        "LGBTQIA Concerns",
+        "Navigating Grief",
+        "Individual Therapy (For Everyone)",
+        "Coping With Anxiety, Burnout, or Depression",
+        "Navigating Relationships"
+      ],
+      "contact": {
+        "email": "ayesha.sharma@example.com",
+        "phone": "+91 9876543211"
+      },
+      "languages_spoken": ["English", "Hindi"],
+      "session_medium": ["Online"],
+      "location": {
+        "city": "Mumbai",
+        "area": "Navi Mumbai"
+      },
+      "fee": 2000,
+      "session_duration": "45-60 Minutes",
+      "qualifications": [
+        "MSc. Clinical Mental Health Sciences (University College London)",
+        "Additional 5 certifications"
+      ],
+      "notes": "Limited sliding scale slots from ₹800 to ₹1500.",
+      "profile_url": "https://themindclan.com/professionals/ayesha-sharma-31032021/"
+    },
+    {
+      "name": "Aditi Shah",
+      "pronouns": "She/Her",
+      "age": 33,
+      "experience": "9 years",
+      "specializations": [
+        "Navigating Relationships",
+        "Individual Therapy (For Everyone)",
+        "Coping With Anxiety, Burnout, or Depression",
+        "LGBTQIA Concerns"
+        
+      ],
+      "contact": {
+        "email": "aditi.shah@example.com",
+        "phone": "+91 9876543212"
+      },
+      "languages_spoken": ["English", "Hindi", "Gujarati"],
+      "session_medium": ["Online", "Offline"],
+      "location": {
+        "city": "Mumbai",
+        "area": "Tardeo"
+      },
+      "fee": "₹3,000 - ₹4,000",
+      "session_duration": "45-60 Minutes",
+      "qualifications": [
+        "Masters in Clinical Psychology",
+        "Additional certification"
+      ],
+      "profile_url": "https://themindclan.com/professionals/aditi-shah-03072021/"
+    },
+    {
+      "name": "Drashti Senghani",
+      "pronouns": "She/Her",
+      "age": 27,
+      "experience": "4 years",
+      "specializations": [
+
+        "Navigating Neurodivergence (Dyslexia, ADHD, Autism, Etc.)",
+        "Navigating Relationships",
+        "Individual Therapy (For Everyone)",
+        "Coping With Anxiety, Burnout, or Depression",
+        "LGBTQIA Concerns",
+        "Navigating Grief"
+      ],
+      "contact": {
+        "email": "drashti.senghani@example.com",
+        "phone": "+91 9876543213"
+      },
+      "languages_spoken": ["English", "Hindi"],
+      "session_medium": ["Online"],
+      "location": {
+        "city": "Mumbai",
+        "area": "Online"
+      },
+      "fee": 1500,
+      "session_duration": "45-60 Minutes",
+      "qualifications": [
+        "Masters in Clinical Psychology",
+        "Additional certifications"
+      ],
+      "profile_url": "https://themindclan.com/professionals/drashti-senghani-05102023/"
+    },
+    {
+      "name": "Veha Pandya",
+      "pronouns": "She/Her",
+      "age": 26,
+      "experience": "3 years",
+      "specializations": [
+        "Individual Therapy (For Everyone)",
+        "Coping With Anxiety, Burnout, or Depression",
+        "Couples Therapy",
+        "LGBTQIA Concerns",
+        "Navigating Grief",
+        "Navigating Relationships"
+      ],
+      "contact": {
+        "email": "veha.pandya@example.com",
+        "phone": "+91 9876543214"
+      },
+      "languages_spoken": ["English"],
+      "session_medium": ["Offline", "Online"],
+      "location": {
+        "city": "Mumbai",
+        "area": "Andheri - West"
+      },
+      "fee": "₹1,000 - ₹1,500",
+      "session_duration": "45-60 Minutes",
+      "qualifications": [
+        "B.A Psychology from Mumbai University",
+        "Additional 2 certifications"
+      ],
+      "notes": "Fee for NRIs: ₹1,500. Couples therapy session charges: ₹1,500.",
+      "profile_url": "https://themindclan.com/professionals/veha-pandya-09052023/"
+    },
+    {
+      "name": "Kavina Kothari",
+      "pronouns": "She/Her",
+      "age": 31,
+      "experience": "8 years",
+      "specializations": [
+        "Individual Therapy (For Everyone)",
+        "Coping With Anxiety, Burnout, or Depression",
+        "LGBTQIA Concerns",
+        "Navigating Postpartum Concerns",
+        "Navigating Relationships"
+      ],
+      "contact": {
+        "email": "kavina.kothari@example.com",
+        "phone": "+91 9876543215"
+      },
+      "languages_spoken": ["English", "Hindi"],
+      "session_medium": ["Online"],
+      "location": {
+        "city": "Mumbai",
+        "area": "Online"
+      },
+      "fee": 2000,
+      "session_duration": "45-60 Minutes",
+      "qualifications": [
+        "Masters in Clinical Psychology",
+        "Additional certifications"
+      ],
+      "profile_url": "https://themindclan.com/professionals/kavina-kothari-01032024/"
+}
+]
