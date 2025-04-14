@@ -2,8 +2,6 @@
 
 Kira is an app for mental health and wellbeing developed in Flutter using Supabase as the relational database system.
 
-#screenshots of the app
-
 # Find the documentation here
 https://docs.google.com/document/d/1xtpNMQwnBXGCnssHseKiqb3pxqCGTqiOJzYAtleNflg/edit?usp=sharing
 
