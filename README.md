@@ -1,8 +1,11 @@
 # kira_version_one
 
-A new Flutter project.
+Kira is an app for mental health and wellbeing developed in Flutter using Supabase as the relational database system.
 
-## Getting Started
+#screenshots of the app
+
+
+# Getting Started
 
 This project is a starting point for a Flutter application.
 
